@@ -1,6 +1,6 @@
 import { createRoot } from 'react-dom/client'
+import Navbar from './components/navbar.jsx'
 
-const element = <h1>Hello World</h1>;
-createRoot(document.getElementById('root')).render(
-  element
+createRoot(document.getElementById('navbar')).render(
+  < Navbar />
 )
