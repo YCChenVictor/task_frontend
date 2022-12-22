@@ -1,8 +1,9 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 import React from "react";
+import createTask from "./create_task.jsx"
 
-export default function Navbar({ fixed }) {
+export default function Navbar() {
   return (
     <>
       <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-black mb-3">
@@ -17,8 +18,8 @@ export default function Navbar({ fixed }) {
             <button
               className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
               type="button"
-              onClick={() => createTask()}
             >
+              create task
               <i className="fas fa-bars"></i>
             </button>
           </div>
