@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 import React from "react";
-import createTask from "./create_task.jsx"
+import CreateTask from "./create_task.jsx"
 
 export default function Navbar() {
   return (
@@ -15,13 +15,7 @@ export default function Navbar() {
             >
               task
             </a>
-            <button
-              className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
-              type="button"
-            >
-              create task
-              <i className="fas fa-bars"></i>
-            </button>
+            <CreateTask />
           </div>
         </div>
       </nav>
