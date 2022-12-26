@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import Modal from "react-modal";
+import TaskModal from "./task_modal.jsx";
 
 function CreateTask() {
+  const MyContext = React.createContext();
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
@@ -10,21 +11,13 @@ function CreateTask() {
         onClick={setModalOpen}
         className="bg-white absolute top-4 right-4 rounded-sm p-2"
       >Create Task</button>
-      <Modal
-        isOpen={modalOpen}
-        onRequestClose={() => setModalOpen(false)}
-      >
-        <div>Modal</div>
-        <div>Modal</div>
-        <div>Modal</div>
-        <div>Modal</div>
-        <div>Modal</div>
-        <div>Modal</div>
-
-        <button
-          onClick={() => setModalOpen(false)}
-        >Close Modal</button>
-      </Modal>
+      <MyContext.Provider value={{ modalOpen, setModalOpen }}>
+        <TaskModal
+          modalOpen={modalOpen}
+          setModalOpen={setModalOpen}
+          MyContext={MyContext}
+        />
+      </MyContext.Provider>
     </div>
   );
 }
