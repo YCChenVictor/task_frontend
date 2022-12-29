@@ -1,32 +1,28 @@
 import React, { useContext } from 'react';
 import Modal from "react-modal";
 
-function TaskModal(props) {
-  const { taskModalOpen, setTaskModalOpen } = useContext(props.MyContext);
+function LoginModal(props) {
+  const { loginModalOpen, setLoginModalOpen } = useContext(props.MyContext);
   return(
     <Modal
       ariaHideApp={false} // TODO: remove it and fix the errors
-      isOpen={Boolean(taskModalOpen)}
+      isOpen={Boolean(loginModalOpen)}
     >
       <form>
         <label>
-          Project:
+          email:
           <input type="text" name="name" />
         </label>
         <label>
-          Spec:
-          <input type="text" name="name" />
-        </label>
-        <label>
-          Price:
+          password:
           <input type="text" name="name" />
         </label>
       </form>
       <button
-        onClick={() => setTaskModalOpen(false)}
+        onClick={() => setLoginModalOpen(false)}
       >Close Modal</button>
     </Modal>
   )
 }
 
-export default TaskModal;
+export default LoginModal;
