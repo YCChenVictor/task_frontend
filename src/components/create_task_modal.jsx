@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import Modal from "react-modal";
 
-function TaskModal(props) {
+function CreateTaskModal(props) {
   const { taskModalOpen, setTaskModalOpen } = useContext(props.MyContext);
   return(
     <Modal
@@ -29,4 +29,4 @@ function TaskModal(props) {
   )
 }
 
-export default TaskModal;
+export default CreateTaskModal;
