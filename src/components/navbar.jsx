@@ -3,13 +3,14 @@ import CreateTaskModal from "./create_task_modal.jsx"
 import LoginModal from './login_modal.jsx'
 import SignUpModal from './sign_up_modal.jsx'
 
-export default function Navbar() {
+function Navbar() {
   const TaskModalContext = React.createContext();
   const LoginModalContext = React.createContext();
   const SignUpModalContext = React.createContext();
   const [taskModalOpen, setTaskModalOpen] = useState(false);
   const [loginModalOpen, setLoginModalOpen] = useState(false);
   const [signUpModalOpen, setSignUpModalOpen] = useState(false);
+
   return (
     <div id="navbar">
       <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-black mb-3">
@@ -64,3 +65,5 @@ export default function Navbar() {
     </div>
   );
 }
+
+export default Navbar;
