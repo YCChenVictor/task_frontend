@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Navbar from "./navbar.jsx"
+import TaskLists from './task_lists.jsx'
 
 export default function App() {
   useEffect(() => {
@@ -10,6 +11,7 @@ export default function App() {
   return (
     <>
       <Navbar />
+      <TaskLists />
     </>
   );
 }
