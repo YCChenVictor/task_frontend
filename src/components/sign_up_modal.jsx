@@ -4,6 +4,7 @@ import Modal from "react-modal";
 function SignUpModal(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
   const { signUpModalOpen, setSignUpModalOpen } = useContext(props.MyContext);
 
   const PostSignUpInfo = (params) => {
